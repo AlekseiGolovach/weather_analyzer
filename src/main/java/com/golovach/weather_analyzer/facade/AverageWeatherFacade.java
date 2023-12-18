@@ -5,7 +5,6 @@ import com.golovach.weather_analyzer.entity.CurrentWeather;
 import com.golovach.weather_analyzer.entity.Weather;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Component

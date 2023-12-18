@@ -1,7 +1,7 @@
 package com.golovach.weather_analyzer.dto;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
-import lombok.Data;
+
 
 import java.util.Objects;
 

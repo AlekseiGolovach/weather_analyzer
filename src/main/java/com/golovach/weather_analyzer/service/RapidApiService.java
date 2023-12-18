@@ -9,8 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-
 @Service
 public class RapidApiService {
     public static final Logger LOGGER = LoggerFactory.getLogger(RapidApiService.class);

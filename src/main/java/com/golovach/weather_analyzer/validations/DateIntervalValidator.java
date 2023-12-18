@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class DateIntervalValidator {
     public boolean commonIntervalIncludesGivenInterval(LocalDate commonFirst, LocalDate givenFirst, LocalDate givenSecond, LocalDate commonSecond) {
         if (givenFirst.isAfter(givenSecond)) {
-            throw new DateIntervalException("First Date can be before second Date");
+            throw new DateIntervalException("First Date must be before second Date");
         }
         if (givenFirst.isAfter(commonFirst.minusDays(1)) && givenSecond.isBefore(commonSecond.plusDays(1))) {
             return true;

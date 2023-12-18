@@ -4,8 +4,6 @@ import com.golovach.weather_analyzer.annotations.ValidDate;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
