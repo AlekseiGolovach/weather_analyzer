@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 public class WeatherLocation {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
 
@@ -32,7 +32,7 @@ public class WeatherLocation {
     @JsonSetter("localtime_epoch")
     private long localtimeEpoch;
     @JsonSetter("localtime")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd H:mm")
     private LocalDateTime localDateTime;
 
     @Override

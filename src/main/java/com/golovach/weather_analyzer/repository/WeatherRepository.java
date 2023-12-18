@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,4 +25,5 @@ public interface WeatherRepository extends JpaRepository<Weather, Long> {
             "from weather w where w.current_weather_id = " +
             "(select cw.id from current_weather cw order by last_updated limit 1)", nativeQuery = true)
     Optional<Weather> findFirstWeather();
+
 }

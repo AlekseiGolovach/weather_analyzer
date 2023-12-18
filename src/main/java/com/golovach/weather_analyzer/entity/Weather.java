@@ -10,7 +10,7 @@ import lombok.Data;
 @Table(name = "weather")
 public class Weather {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
 

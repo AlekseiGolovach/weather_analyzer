@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 public class CurrentWeather {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
 

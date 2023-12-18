@@ -8,7 +8,7 @@ import lombok.Data;
 @Entity
 public class WeatherCondition {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
     private Long id;
 
