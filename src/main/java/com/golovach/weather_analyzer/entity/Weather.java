@@ -24,4 +24,6 @@ public class Weather {
     @JoinColumn(name = "current_weather_id", referencedColumnName = "id")
     private CurrentWeather currentWeather;
 
+
+
 }

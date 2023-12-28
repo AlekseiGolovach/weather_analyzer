@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Data
 @Entity
@@ -98,5 +99,18 @@ public class CurrentWeather {
                 ", gustMph=" + gustMph +
                 ", gustKph=" + gustKph +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CurrentWeather that = (CurrentWeather) o;
+        return lastUpdatedEpoch == that.lastUpdatedEpoch && tempC == that.tempC && tempF == that.tempF && isDay == that.isDay && Double.compare(that.windMph, windMph) == 0 && Double.compare(that.windKph, windKph) == 0 && Double.compare(that.windDegree, windDegree) == 0 && pressureMb == that.pressureMb && Double.compare(that.pressureIn, pressureIn) == 0 && precipMm == that.precipMm && precipIn == that.precipIn && humidity == that.humidity && cloud == that.cloud && Double.compare(that.feelsLikeC, feelsLikeC) == 0 && Double.compare(that.feelsLikeF, feelsLikeF) == 0 && Double.compare(that.visKm, visKm) == 0 && Double.compare(that.visMiles, visMiles) == 0 && uv == that.uv && Double.compare(that.gustMph, gustMph) == 0 && Double.compare(that.gustKph, gustKph) == 0 && id.equals(that.id) && Objects.equals(lastUpdated, that.lastUpdated) && Objects.equals(weatherCondition, that.weatherCondition) && Objects.equals(windDir, that.windDir);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, lastUpdatedEpoch, lastUpdated, tempC, tempF, isDay, weatherCondition, windMph, windKph, windDegree, windDir, pressureMb, pressureIn, precipMm, precipIn, humidity, cloud, feelsLikeC, feelsLikeF, visKm, visMiles, uv, gustMph, gustKph);
     }
 }

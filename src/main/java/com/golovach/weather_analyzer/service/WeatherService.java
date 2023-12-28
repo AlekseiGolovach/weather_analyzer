@@ -4,7 +4,7 @@ import com.golovach.weather_analyzer.entity.Weather;
 import com.golovach.weather_analyzer.exception.WeatherDataNotFoundException;
 import com.golovach.weather_analyzer.payload.request.FromToDateWeatherRequest;
 import com.golovach.weather_analyzer.repository.WeatherRepository;
-import com.golovach.weather_analyzer.validations.DateIntervalValidator;
+import com.golovach.weather_analyzer.validation.DateIntervalValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

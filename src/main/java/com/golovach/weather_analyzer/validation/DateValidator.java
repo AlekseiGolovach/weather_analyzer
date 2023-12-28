@@ -1,4 +1,4 @@
-package com.golovach.weather_analyzer.validations;
+package com.golovach.weather_analyzer.validation;
 
 import com.golovach.weather_analyzer.annotations.ValidDate;
 import jakarta.validation.ConstraintValidator;
